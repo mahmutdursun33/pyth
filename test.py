@@ -1,13 +1,13 @@
 import random
-import time          
+import time  
+from itertools import combinations
+
 kelimeler = ["elma"]
 kelime = random.choice(kelimeler)
 veri=[]
 harfler = []
-zaman=5
-
-def kelimeyi_goster():
-    print(kelime)
+zaman=1
+kombinasyonlar = []
 
 def timer(time):
     
@@ -23,13 +23,13 @@ def tahmin():
         a=input("kelime giriniz")
         veri.append(a)
         timer(time)
- 
 
-for harf in veri:
-    harfler.append(harf)
-
-print(harfler)  
-
+    birlesik_veri ="".join(veri)
+    print(birlesik_veri)
+    for harf in birlesik_veri:
+        temp=list(harf)
+        harfler.append(temp)
+    print(harfler)
+    
+    
 tahmin()
-
-
