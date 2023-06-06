@@ -1,7 +1,9 @@
 import random
 import time          
-kelimeler = ["elma", "armut", "muz", "portakal", "çilek", "kiraz", "ankara"]
+kelimeler = ["elma"]
 kelime = random.choice(kelimeler)
+veri=[]
+harfler = []
 zaman=5
 
 def kelimeyi_goster():
@@ -15,9 +17,19 @@ def timer(time):
 
 def tahmin():
     a=input("kelime giriniz")
+    veri.append(a)
     timer(time)
     while(kelime!=a):
         a=input("kelime giriniz")
+        veri.append(a)
         timer(time)
+ 
+
+for harf in veri:
+    harfler.append(harf)
+
+print(harfler)  
+
 tahmin()
+
 
